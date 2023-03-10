@@ -1,0 +1,108 @@
+﻿@model IEnumerable<EM.Domain.Model.Aluno>
+@using System.Globalization;
+@using EM.Domain.Enums;
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container pt-3">
+    <div class="d-flex justify-content-between">
+        <h1>Tabela de Alunos</h1>
+
+        <p>
+            <a asp-action="Create" class="btn btn-primary">Adicionar Aluno</a>
+        </p>
+
+    </div>
+
+    <hr />
+
+    <div>
+        <form>
+            <strong>Opções de busca: </strong>
+            <input type="radio" name="opcoesBusca" VALUE="matricula"> Matricula
+            <input type="radio" name="opcoesBusca" VALUE="nome"> Nome
+            <div class="input-group mb-3">
+                <input type="text" class="w-50 rounded" placeholder="Matrícula ou nome do aluno...">
+                <button class="btn btn-primary">Buscar</button>
+            </div>
+        </form>
+    </div>
+
+    <table class="table table-bordered  table-dark">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Matricula)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CPF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sexo)
+                </th>
+                <th>
+                    Opções
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Matricula)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CPF)
+                    </td>
+                    <td>
+                        @item.Nascimento.ToString("dd/MM/yyyy")
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sexo)
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" href="@Url.ActionLink("Editar", "Edit") ">Editar</a>  |
+                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-excluir">Excluir</a>
+                        @*<a class="btn btn-danger" href="@Url.ActionLink("Deletar", "Delete")">Excluir</a>*@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+     @*<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-excluir" data-bs-whatever="">Open modal for</button>*@
+
+    @*modal*@
+    <div class="modal fade" id="modal-excluir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Você tem certeza que quer excluir esse aluno?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                    <p class="font-weight-bold">Matricula: </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                <button type="button" class="btn btn-danger">Excluir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</div>
+
+

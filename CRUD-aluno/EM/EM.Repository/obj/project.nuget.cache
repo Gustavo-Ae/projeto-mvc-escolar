@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "5xgRxK58OmFOInNUmPzwiK1pK/MFK/l6qkSPeD4TiPoI6KnUbxqhxqFuJLCBNx7Lc5FHyjSfDVwUm5zhg9kEdw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Escolar Manager\\Documents\\arq-gustavo\\projeto-estagio\\CRUD-aluno\\EM\\EM.Repository\\EM.Repository.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Escolar Manager\\.nuget\\packages\\firebirdsql.data.firebirdclient\\9.1.1\\firebirdsql.data.firebirdclient.9.1.1.nupkg.sha512",
+    "C:\\Users\\Escolar Manager\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
+    "C:\\Users\\Escolar Manager\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Escolar Manager\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Escolar Manager\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,50 @@
+﻿@model EM.Domain.Model.Aluno
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastrar Aluno</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                <div class="form-group">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CPF" class="control-label"></label>
+                    <input asp-for="CPF" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nascimento" class="control-label"></label>
+                    <input asp-for="Nascimento" class="form-control" type="date"/>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="Sexo" class="control-label"></label>
+                    <select asp-for="Sexo" class="form-select" id="sexo" aria-label="Default select example" required>
+                      <option selected></option>
+                      <option value="0">Masculino</option>
+                      <option value="1">Feminino</option>
+                      <span asp-validation-for="Sexo" class="text-danger"></span>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Salvar" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-secondary"> Voltar </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
