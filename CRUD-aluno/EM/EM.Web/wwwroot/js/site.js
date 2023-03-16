@@ -7,37 +7,42 @@ const abrirModal = document.getElementById('modal-excluir')
 
 const matricula = document.getElementById("modal-matricula")
 
-abrirModal.addEventListener('show.bs.modal', event => {
-    // Button that triggered the modal
-    const button = event.relatedTarget
+if (abrirModal) {
+    abrirModal.addEventListener('show.bs.modal', event => {
+        // Button that triggered the modal
+        const button = event.relatedTarget
 
-    const informacoesAluno = button.getAttribute('data-bs-whatever').split(",")
+        const informacoesAluno = button.getAttribute('data-bs-whatever').split(",")
 
-    const nome = document.getElementById("modal-nome")
+        const nome = document.getElementById("modal-nome")
 
-    const CPF = document.getElementById("modal-cpf")
+        const CPF = document.getElementById("modal-cpf")
 
-    const nascimento = document.getElementById("modal-nascimento")
+        const nascimento = document.getElementById("modal-nascimento")
 
-    const sexo = document.getElementById("modal-sexo")
+        const sexo = document.getElementById("modal-sexo")
 
-    matricula.textContent = informacoesAluno[0]
+        matricula.textContent = informacoesAluno[0]
 
-    nome.textContent = informacoesAluno[1]
+        nome.textContent = informacoesAluno[1]
 
-    CPF.textContent = informacoesAluno[2]
+        CPF.textContent = informacoesAluno[2]
 
-    nascimento.textContent = informacoesAluno[3]
+        nascimento.textContent = informacoesAluno[3]
 
-    sexo.textContent = informacoesAluno[4]
+        sexo.textContent = informacoesAluno[4]
 
-})
+    })
+}
+
 
 const botaoExcluirNoModal = document.querySelector("#btn-modalExcluir")
 
-botaoExcluirNoModal.addEventListener("click", function () {
-    botaoExcluirNoModal.setAttribute("href", "/Aluno/Delete/" + matricula.innerHTML)
-})
+if (botaoExcluirNoModal) {
+    botaoExcluirNoModal.addEventListener("click", function () {
+        botaoExcluirNoModal.setAttribute("href", "/Aluno/Delete/" + matricula.innerHTML)
+    })
+}
 
 
 function mascaraCPF(i) {
@@ -55,24 +60,28 @@ function mascaraCPF(i) {
 
 }
 
-//const botaoBuscar = document.getElementById("btn-busca")
+const alerta = document.querySelector(".alert")
 
-//botaoBuscar.addEventListener("click", function (e) {
-//     e.preventDefault();
+const botaoExcluir = document.querySelector(".close-alert")
 
-//    var radios = document.getElementsByName("opcoesBusca")
+if (alerta) {
+    ocultarAlerta()
+}
 
-//    const valorBusca = document.getElementById("input-busca")
+if (botaoExcluir) {
+    fecharAlerta()
+}
 
-//    for (var i = 0; i < radios.length; i++) {
-//        if (radios[i].checked) {
+function ocultarAlerta() {
+    setTimeout(function () {
+        alerta.classList.add("d-none")
+    }, 3000)
+}
 
-//            console.log(radios[i].value)
+function fecharAlerta() {
+    botaoExcluir.addEventListener("click", function () {
+        console.log("Passou")
+        alerta.classList.add("d-none")
+    })
+}
 
-//            //botaoBuscar.setAttribute("href", "/Aluno/Pesquisa/" + radios[i].value)
-//            window.history.pushState(“object or string”, “Title”, “/Aluno/Pesquisa/”+radios[i].value);
-//        }
-//    }
-
-//    console.log("ok")
-//})

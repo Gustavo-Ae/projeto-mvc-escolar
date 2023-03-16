@@ -75,7 +75,7 @@ namespace EM.Web.Controllers
                 }
                 else
                 {
-                    TempData["MessagemErro"] = "🚩 CPF Inválido";
+                    TempData["MensagemErro"] = "🚩 CPF Inválido";
                 }
             
 
@@ -106,14 +106,10 @@ namespace EM.Web.Controllers
             }
             else
             {
-                TempData["MessagemErro"] = "🚩 CPF Inválido";
+                TempData["MensagemErro"] = "🚩 CPF Inválido";
             }
 
-
             return View();
-
-            //return RedirectToAction("Index");
-            //return View(aluno);
 
         }
 
