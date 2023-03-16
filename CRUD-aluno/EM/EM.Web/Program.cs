@@ -87,6 +87,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Aluno}/{action=Index}/{id?}");
+    pattern: "{controller=Aluno}/{action=Index}/{matricula?}");
 
 app.Run();

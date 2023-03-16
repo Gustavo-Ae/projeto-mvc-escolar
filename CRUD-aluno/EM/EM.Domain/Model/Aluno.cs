@@ -1,5 +1,6 @@
 ﻿using EM.Domain.Enums;
 using EM.Domain.Interface;
+using System.ComponentModel.DataAnnotations;
 
 namespace EM.Domain.Model
 {
@@ -7,12 +8,15 @@ namespace EM.Domain.Model
     {
         public int Matricula { get; set; }
 
+        [Required(ErrorMessage = "O Nome é obrigatorio")]
         public string Nome { get; set; }
 
-        public string CPF { get; set; }
+        public string? CPF { get; set; }
 
+        [Required(ErrorMessage= "Informe sua data de nascimento")]
         public DateTime Nascimento { get; set; }
 
+        [Required(ErrorMessage = "Informe seu sexo")]
         public EnumeradorSexo Sexo { get; set; }
 
         public override bool Equals(object? obj)

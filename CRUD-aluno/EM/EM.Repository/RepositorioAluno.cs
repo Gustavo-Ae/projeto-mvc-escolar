@@ -16,7 +16,44 @@ namespace EM.Repository
 
         public IEnumerable<Aluno> GetByContendoNoNome(string parteDoNome)
         {
-            return null;
+            FbConnection conexao = ConexaoFirebird.getConexao();
+
+            try
+            {
+                conexao.Open();
+
+                List<Aluno> Alunos = new();
+
+                FbCommand comandoSQL = new FbCommand($"SELECT * FROM TB_ALUNO WHERE TBALUNO_NOME LIKE '%{parteDoNome}%';", conexao);
+                FbDataReader reader = comandoSQL.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Aluno aluno = new();
+
+                    // obtém os valores das colunas usando os índices ou nomes das colunas;
+
+                    aluno.Matricula = reader.GetInt32(0);
+                    aluno.Nome = reader.GetString(1);
+                    aluno.CPF = reader.GetString(2);
+                    aluno.Nascimento = reader.GetDateTime(3);
+                    aluno.Sexo = (EnumeradorSexo)reader.GetInt32(4);
+
+                    Alunos.Add(aluno);
+
+                }
+                return Alunos;
+            }
+            catch (FbException e)
+            {
+                Console.WriteLine($"Ocorreu um erro na classe RepositorioAluno no método GetByContendoNoNome(): {e.Message}");
+                throw e;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
         }
 
         public Aluno GetByMatricula(int matricula)
@@ -35,11 +72,12 @@ namespace EM.Repository
                 while (reader.Read())
                 {
                     // obtém os valores das colunas usando os índices ou nomes das colunas;
-
+                    
                     aluno.Matricula = reader.GetInt32(0);
                     aluno.Nome = reader.GetString(1);
                     aluno.CPF = reader.GetString(2);
                     aluno.Nascimento = reader.GetDateTime(3);
+                    aluno.Sexo = (EnumeradorSexo)reader.GetInt32(4);
                 }
                 return aluno;
             }
@@ -52,18 +90,11 @@ namespace EM.Repository
             {
                 conexao.Close();
             }
-
         }
 
         public override void Add(Aluno aluno)
         {
             FbConnection conexao = ConexaoFirebird.getConexao();
-
-            if (aluno == null)
-            {
-                Console.WriteLine("Informe os dados do aluno");
-                throw new Exception("Informe os dados do aluno");
-            }
 
             try
             {
@@ -76,7 +107,6 @@ namespace EM.Repository
             }
             catch (Exception e) {
                 Console.WriteLine($"Ocorreu um erro na classe RepositorioAluno no método Add(): {e.Message}");
-                throw e;
             }
             finally{ 
                 conexao.Close(); 
@@ -99,7 +129,6 @@ namespace EM.Repository
             catch (Exception e)
             {
                 Console.WriteLine($"Ocorreu um erro na classe RepositorioAluno no método Add(): {e.Message}");
-                throw e;
             }
             finally
             {
@@ -123,7 +152,6 @@ namespace EM.Repository
             catch (Exception e)
             {
                 Console.WriteLine($"Ocorreu um erro na classe RepositorioAluno no método Add(): {e.Message}");
-                throw e;
             }
             finally
             {

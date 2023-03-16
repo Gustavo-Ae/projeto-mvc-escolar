@@ -1,12 +1,27 @@
 ﻿@model EM.Domain.Model.Aluno
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastrar Aluno";
+}
+
+@if (TempData["MessagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MessagemErro"]
+    </div>
+}
+
+@if (TempData["MensagemAlerta"] != null)
+{
+    <div class="alert alert-warning" role="alert">
+        @TempData["MensagemAlerta"]
+    </div>
 }
 
 <h1>Cadastrar Aluno</h1>
 
 <hr />
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -19,11 +34,12 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="CPF" class="control-label"></label>
-                    <input asp-for="CPF" class="form-control" />
+                    <input asp-for="CPF" type="text" class="form-control" maxlength="14" oninput="mascaraCPF(this)" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Nascimento" class="control-label"></label>
                     <input asp-for="Nascimento" class="form-control" type="date"/>
+                    <span asp-validation-for="Nascimento" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mb-4">
@@ -32,8 +48,8 @@
                       <option selected></option>
                       <option value="0">Masculino</option>
                       <option value="1">Feminino</option>
-                      <span asp-validation-for="Sexo" class="text-danger"></span>
                     </select>
+                    <span asp-validation-for="Sexo" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
