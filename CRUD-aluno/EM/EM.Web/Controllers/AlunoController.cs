@@ -10,11 +10,18 @@ namespace EM.Web.Controllers
     {
         private RepositorioAluno _repository = new();
 
+   
         public IActionResult Index(string texto, string opcaoBusca)
         {
-
             if (opcaoBusca == "nome")
             {
+
+                if (int.TryParse(texto, out int resultado))
+                {
+                    TempData["MensagemAlerta"] = $"⚠️ Não pode buscar nome utilizando numeros";
+                    return View(_repository.GetAll());
+                }
+
                 try
                 {
                     IEnumerable<Aluno> alunos = _repository.GetByContendoNoNome(texto);

@@ -518,6 +518,8 @@ C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.
 C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\bin\Debug\net6.0\EM.Domain.pdb
 C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\bin\Debug\net6.0\EM.Repository.pdb
 C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\EM.Web.csproj.AssemblyReference.cache
+C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\EM.Web.Properties.Resources.resources
+C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\EM.Web.csproj.GenerateResource.cache
 C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\EM.Web.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\EM.Web.AssemblyInfoInputs.cache
 C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\EM.Web.AssemblyInfo.cs
@@ -542,5 +544,3 @@ C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.
 C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\EM.Web.pdb
 C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\EM.Web.genruntimeconfig.cache
 C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\ref\EM.Web.dll
-C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\EM.Web.Properties.Resources.resources
-C:\Users\Escolar Manager\Documents\arq-gustavo\projeto-estagio\CRUD-aluno\EM\EM.Web\obj\Debug\net6.0\EM.Web.csproj.GenerateResource.cache
