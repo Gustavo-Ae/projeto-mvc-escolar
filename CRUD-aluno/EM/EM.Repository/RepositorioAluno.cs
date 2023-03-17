@@ -3,6 +3,7 @@ using EM.Domain.Enums;
 using EM.Domain.Model;
 using EM.Repository.Conexao;
 using FirebirdSql.Data.FirebirdClient;
+using System.Reflection.Emit;
 
 namespace EM.Repository
 {
@@ -24,7 +25,9 @@ namespace EM.Repository
 
                 List<Aluno> Alunos = new();
 
-                FbCommand comandoSQL = new FbCommand($"SELECT * FROM TB_ALUNO WHERE TBALUNO_NOME LIKE '%{parteDoNome}%';", conexao);
+                //FbCommand comandoSQL = new FbCommand($"SELECT * FROM TB_ALUNO WHERE TBALUNO_NOME LIKE '%{parteDoNome}%';", conexao);
+                FbCommand comandoSQL = new FbCommand($"SELECT * FROM TB_ALUNO WHERE UPPER(TBALUNO_NOME) LIKE UPPER('%{parteDoNome}%');", conexao);
+                // SELECT * FROM TB_ALUNO WHERE TBALUNO_NOME LIKE '%{parteDoNome}%'  COLLATE UNICODE_CI_AI;
                 FbDataReader reader = comandoSQL.ExecuteReader();
 
                 while (reader.Read())

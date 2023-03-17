@@ -29,8 +29,13 @@
     <div>
         <form asp-action="Index">
             <strong>Opções de busca: </strong>
-            <input type="radio" name="opcaoBusca" value="matricula"> Matricula
-            <input type="radio" name="opcaoBusca" value="nome"> Nome
+
+            <input type="radio" name="opcaoBusca" value="matricula" id="opcaoBusca_matricula">
+            <label for="opcaoBusca_matricula">Matricula</label>
+
+            <input type="radio" name="opcaoBusca" value="nome" id="opcaoBusca_nome">
+            <label for="opcaoBusca_nome">Nome</label>
+
             <div class="input-group mb-3">
                 <input type="text" name="texto" class="w-50 rounded" placeholder="Matrícula ou nome do aluno..." id="input-busca" required>
                 <button type="submit" class="btn btn-primary" id="btn-busca">Buscar</button>

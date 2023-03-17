@@ -10,7 +10,6 @@ namespace EM.Web.Controllers
     {
         private RepositorioAluno _repository = new();
 
-   
         public IActionResult Index(string texto, string opcaoBusca)
         {
             if (opcaoBusca == "nome")
@@ -40,8 +39,14 @@ namespace EM.Web.Controllers
                 }
 
             }
-            else if (opcaoBusca == "matricula" && Regex.IsMatch(texto, @"^[0-9]+$"))
+            else if (opcaoBusca == "matricula")
             {
+
+                if (!Regex.IsMatch(texto, @"^[0-9]+$"))
+                {
+                    TempData["MensagemAlerta"] = $"⚠️ Não pode buscar matricula utilizando letras";
+                    return View(_repository.GetAll());
+                }
 
                 Aluno aluno = _repository.GetByMatricula(int.Parse(texto));
 
@@ -69,13 +74,13 @@ namespace EM.Web.Controllers
         [HttpPost]
         public IActionResult Create(Aluno aluno)
         {
-          
-                if (aluno.Nome.Length < 3 || aluno.Nome.Length > 100)
+
+               if (aluno.Nome.Length < 3 || aluno.Nome.Length > 100)
                 {
                     TempData["MensagemAlerta"] = $"⚠️ Nome do Aluno tem que ter no minimo 3 caracteres e no máximo 100 caracteres";
                 }
 
-                if (aluno.CPF == null || ValidarCPF.IsValid(aluno.CPF) == true)
+                else if (aluno.CPF == null || ValidarCPF.IsValid(aluno.CPF) == true)
                 {
                     _repository.Add(aluno);
                     return RedirectToAction("Index");
@@ -106,6 +111,7 @@ namespace EM.Web.Controllers
             {
                 TempData["MensagemAlerta"] = $"⚠️ Nome do Aluno tem que ter no minimo 3 caracteres e no máximo 100 caracteres";
             }
+
             else if (aluno.CPF == null || ValidarCPF.IsValid(aluno.CPF) == true)
             {
                 _repository.Update(aluno);

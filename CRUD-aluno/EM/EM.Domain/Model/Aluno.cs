@@ -9,6 +9,7 @@ namespace EM.Domain.Model
         public int Matricula { get; set; }
 
         [Required(ErrorMessage = "O Nome é obrigatorio")]
+        [RegularExpression(@"^[a-zA-ZÀ-ÿ\s]*$", ErrorMessage = "O campo Nome deve conter apenas letras.")]
         public string Nome { get; set; }
 
         public string? CPF { get; set; }
