@@ -49,7 +49,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Nascimento" class="control-label"></label>
-                    <input asp-for="Nascimento" class="form-control" type="date"/>
+                    <input asp-for="Nascimento" class="form-control" type="date" max="@DateTime.Now.ToString("yyyy-MM-dd")" />
                     <span asp-validation-for="Nascimento" class="text-danger"></span>
                 </div>
 
