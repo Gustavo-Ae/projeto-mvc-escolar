@@ -1,5 +1,6 @@
 ﻿
 using EM.Domain.Interface;
+using EM.Domain.Model;
 
 namespace EM.Repository
 {
@@ -14,9 +15,7 @@ namespace EM.Repository
 
         public abstract IEnumerable<T> GetAll();
 
-        //public Get(Express)
-        //{
+        public abstract IEnumerable<T> Get(Func<T, bool> predicate);
 
-        //}
     }
 }

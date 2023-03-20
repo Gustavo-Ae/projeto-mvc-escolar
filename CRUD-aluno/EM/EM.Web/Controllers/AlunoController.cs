@@ -48,15 +48,16 @@ namespace EM.Web.Controllers
                     return View(_repository.GetAll());
                 }
 
-                Aluno aluno = _repository.GetByMatricula(int.Parse(texto));
+                IEnumerable<Aluno> alunos = _repository.Get(x => x.Matricula == int.Parse(texto));
 
-                if (aluno.Matricula == 0)
+                if (alunos.Count() == 0)
                 {
                     TempData["MensagemAlerta"] = $"⚠️ Aluno com a matricula {texto} não foi encontrado!";
                     return View(_repository.GetAll());
                 }
 
-                return View(new List<Aluno> { aluno });
+                //return View(new List<Aluno> { aluno });
+                return View(alunos);
             }
             else
             {

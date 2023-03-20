@@ -10,10 +10,37 @@ namespace EM.Repository
     public class RepositorioAluno : RepositorioAbstrato<Aluno>
     {
 
-        //public IEnumerable<Aluno> Get(Predicate<>)
-        //{
-        //    return null;
-        //}
+        public override IEnumerable<Aluno> Get(Func<Aluno, bool> predicate)
+        {
+            FbConnection conexao = ConexaoFirebird.getConexao();
+
+            try
+            {
+                conexao.Open();
+                FbCommand comandoSQL = new FbCommand($"SELECT PK_TBALUNO_MATRICULA, TBALUNO_NOME, TBALUNO_CPF, TBALUNO_NASCIMENTO, TBALUNO_SEXO FROM TB_ALUNO;", conexao);
+                List<Aluno> Alunos = new();
+                FbDataReader reader = comandoSQL.ExecuteReader();
+                while (reader.Read())
+                {
+                    Aluno aluno = new Aluno();
+                    aluno.Matricula = reader.GetInt32(0);
+                    aluno.Nome = reader.GetString(1);
+                    aluno.CPF = reader.GetString(2);
+                    aluno.Nascimento = reader.GetDateTime(3);
+                    aluno.Sexo = (EnumeradorSexo)reader.GetInt32(4);
+                    Alunos.Add(aluno);
+                }
+                return Alunos.Where(predicate);
+            }
+            catch (FbException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
 
         public IEnumerable<Aluno> GetByContendoNoNome(string parteDoNome)
         {
