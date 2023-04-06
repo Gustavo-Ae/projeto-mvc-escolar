@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Escolar Manager\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gusta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Escolar Manager\\Documents\\arq-gustavo\\projeto-estagio\\CRUD-aluno\\EM\\EM.Domain\\EM.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Documents\\PROJETOS-C#\\estagio-escolar-manager\\projeto-mvc-escolar\\projeto-mvc-escolar\\CRUD-aluno\\EM\\EM.Domain\\EM.Domain.csproj",
       "projectName": "EM.Domain",
-      "projectPath": "C:\\Users\\Escolar Manager\\Documents\\arq-gustavo\\projeto-estagio\\CRUD-aluno\\EM\\EM.Domain\\EM.Domain.csproj",
-      "packagesPath": "C:\\Users\\Escolar Manager\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Escolar Manager\\Documents\\arq-gustavo\\projeto-estagio\\CRUD-aluno\\EM\\EM.Domain\\obj\\",
+      "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PROJETOS-C#\\estagio-escolar-manager\\projeto-mvc-escolar\\projeto-mvc-escolar\\CRUD-aluno\\EM\\EM.Domain\\EM.Domain.csproj",
+      "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PROJETOS-C#\\estagio-escolar-manager\\projeto-mvc-escolar\\projeto-mvc-escolar\\CRUD-aluno\\EM\\EM.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Escolar Manager\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -66,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

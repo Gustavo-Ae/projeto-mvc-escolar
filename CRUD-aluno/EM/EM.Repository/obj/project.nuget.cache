@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "ZoqKlpj5QTMfACUyRLGYTmOGVyQ45VqDqX2UDmcy0ui2iUVg0GdBxflFWYUdH/CRV+pqnU9xUNITT4oCied1yw==",
+  "dgSpecHash": "oaqaE25F2/oEGH53kOPDA60JuvGeTiM+RVSQNi1jAIYsQ0pGcLte25x8TWwBOB8X/7U5Wro5xBvp81SEkv1+fw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Escolar Manager\\Documents\\arq-gustavo\\projeto-estagio\\CRUD-aluno\\EM\\EM.Repository\\EM.Repository.csproj",
+  "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\PROJETOS-C#\\estagio-escolar-manager\\projeto-mvc-escolar\\projeto-mvc-escolar\\CRUD-aluno\\EM\\EM.Repository\\EM.Repository.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Escolar Manager\\.nuget\\packages\\firebirdsql.data.firebirdclient\\9.1.1\\firebirdsql.data.firebirdclient.9.1.1.nupkg.sha512",
-    "C:\\Users\\Escolar Manager\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
-    "C:\\Users\\Escolar Manager\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\Escolar Manager\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
-    "C:\\Users\\Escolar Manager\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\gusta\\.nuget\\packages\\firebirdsql.data.firebirdclient\\9.1.1\\firebirdsql.data.firebirdclient.9.1.1.nupkg.sha512",
+    "C:\\Users\\gusta\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
+    "C:\\Users\\gusta\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\gusta\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\gusta\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

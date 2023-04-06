@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QwLub3zNyNHTFmprBZUp9qRMzb2rwl1D92uUe619ucbJE8zaVSHkMwI/tJ5EQdfJPFbUE9J0F/Am8Mq4fQFw3g==",
+  "dgSpecHash": "B7OMDFQW77ADh8E1NcZqzCCrr7ujh0UOOUcUDr8mhgz1Qt1aUA5E1A7Nd5NvU0zSMuJzlDE+lXY6T3bfnjFTkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Escolar Manager\\Documents\\arq-gustavo\\projeto-estagio\\CRUD-aluno\\EM\\EM.Domain\\EM.Domain.csproj",
+  "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\PROJETOS-C#\\estagio-escolar-manager\\projeto-mvc-escolar\\projeto-mvc-escolar\\CRUD-aluno\\EM\\EM.Domain\\EM.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

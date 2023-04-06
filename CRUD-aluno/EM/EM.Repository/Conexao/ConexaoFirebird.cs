@@ -8,7 +8,7 @@ namespace EM.Repository.Conexao
     {
         public static FbConnection getConexao()
         {
-            string informacoesParaConexaoBanco = "UserID=SYSDBA;Password=masterkey;Host=localhost;Port=3054;Database=C:\\Users\\Escolar Manager\\Documents\\arq-gustavo\\BancoDeDados-CRUD\\DB_ALUNO.FDB;";
+            string informacoesParaConexaoBanco = "UserID=SYSDBA;Password=masterkey;Host=localhost;Port=3050;Database=C:\\Users\\gusta\\OneDrive\\Documents\\PROJETOS-C#\\estagio-escolar-manager\\Banco de dados Firebird_4_0\\DB_ALUNO.FDB;";
 
             return new FbConnection(informacoesParaConexaoBanco);
         }
