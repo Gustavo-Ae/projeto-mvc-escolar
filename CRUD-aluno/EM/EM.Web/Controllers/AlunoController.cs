@@ -81,7 +81,7 @@ namespace EM.Web.Controllers
                     TempData["MensagemAlerta"] = $"⚠️ Nome do Aluno tem que ter no minimo 3 caracteres e no máximo 100 caracteres";
                 }
 
-                else if (aluno.CPF == null || ValidarCPF.IsValid(aluno.CPF) == true)
+                else if (aluno.CPF == null || aluno.CPF.ECpfValido() == true)
                 {
                     _repository.Add(aluno);
                     return RedirectToAction("Index");
@@ -113,7 +113,7 @@ namespace EM.Web.Controllers
                 TempData["MensagemAlerta"] = $"⚠️ Nome do Aluno tem que ter no minimo 3 caracteres e no máximo 100 caracteres";
             }
 
-            else if (aluno.CPF == null || ValidarCPF.IsValid(aluno.CPF) == true)
+            else if (aluno.CPF == null || aluno.CPF.ECpfValido() == true)
             {
                 _repository.Update(aluno);
                 TempData["MensagemSucesso"] = "Aluno alterado com sucesso";
